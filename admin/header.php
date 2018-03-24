@@ -61,8 +61,7 @@
 
             <!-- Logo -->
             <div  align="center">
-                    <h1 style="color:#FFFFFF"><strong>DHARWAD ARMY</strong></h1>
-					<h1 style="color:#FFFFFF"><strong>WELFARE DEPARTMENT</strong></h1>
+                    <h1 style="color:#FFFFFF"><strong>ARMY WELFARE DEPARTMENT</strong></h1>
             </div>
 
         </header>

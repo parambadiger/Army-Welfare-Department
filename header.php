@@ -65,7 +65,7 @@
                                 <div class="gallery-item isotope-item on-rent ">
   
                     				
-									<h1 style="color:#FFFFFF"><strong>DHARWAD ARMY WELFARE DEPARTMENT</strong></h1>
+									<h1 style="color:#FFFFFF"><strong>ARMY WELFARE DEPARTMENT</strong></h1>
             					</div>
 
 			<div class="gallery-item isotope-item on-rent ">
