@@ -1,0 +1,102 @@
+<?php
+ require 'header.php';
+ ?>
+<style type="text/css">
+<!--
+.style1 {font-family: Geneva, Arial, Helvetica, sans-serif}
+-->
+</style>
+
+ <div class="container contents lisitng-grid-layout">
+        <div class="row">
+            <div class="span9 main-wrap">
+
+                <!-- Main Content -->
+                <div class="main">
+                <section class="listing-layout">
+<h3 class="title-heading style1">Welcome to SSMS Placement Cell...</h3>
+<div id="home-flexslider" class="clearfix">
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                
+                <a href="#"><img src="images/temp-images/slider-image.jpg" height="200px" ></a>            </li>
+            <li>
+                <a href="#"><img src="images/temp-images/slider-image3.jpg" height="200px" /><img src="images/temp-images/slider-image2.jpg" height="200px"></a>            </li>
+            <li></li>
+        </ul>
+    </div>
+</div><!-- End Slider --> 
+</div>
+</div>
+<!-- Sidebar -->
+            <div class="span3 sidebar-wrap">
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <section class="widget advance-search">
+                    <h4 class="title search-heading">Job Search<i class="icon-search"></i></h4>
+                    <div class="as-form-wrap">
+                    <form class="advance-search-form clearfix" action="search_result.php" method="POST">
+                            <div>
+                                <label>Job Keyword</label>
+                                    <input type="text" name="job"  placeholder="Job Description"  class="required">
+                                <label>Location</label>
+                                    <span class="selectwrap">
+                                        <select name="state">
+                                        <?php
+                                            require 'connect.php';
+                                            $q="SELECT * FROM country";
+                                            $r=mysql_query($q);
+                                            if($r)
+                                            {
+                                                $fetch=mysql_num_rows($r);
+                                                if($fetch>0)
+                                                {
+                                                    while($row=mysql_fetch_array($r))
+                                                    {
+                                                        echo '<option value="'.$row['state'].'">'.$row['state'].'</option>';
+                                                    }
+                                                
+                                                }
+                                                else
+                                                {
+                                                    echo 'No data found on this date ';
+                                                }
+                                            }
+                                            else
+                                            {
+                                                echo mysqli_error();
+                                            }
+                                    ?>
+                                        </select>
+                                    </span>
+                                    <div>
+                                    <label>Experience</label>
+                                    <span class="selectwrap">
+                                        <select name="experience" >
+                                        <option value="0">Freshers</option>
+                                        <option value="1">1yr</option>
+                                        <option value="2">2yrs</option>
+                                        <option value="3">3yrs</option>
+                                        <option value="4">4yrs</option>
+                                        <option value="5">5yrs</option>
+                                        <option value="6">6yrs</option>
+                                        <option value="7">7yrs</option>
+                                        <option value="8">8yrs</option>
+                                        <option value="9">9yrs</option>
+							<option value="10">10yrs</option>
+                                     </select>
+                                    </span>
+                                </div>
+                            </div>
+                            <input type="submit" value="Search" class=" real-btn btn">
+                        </form>
+                        </div>
+                    </section>
+                    </aside>
+                    </div>
+</div>
+</div> <?php
+ require 'footer.php';
+ ?>
